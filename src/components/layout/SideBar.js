@@ -5,6 +5,7 @@ import { sideBarBtnItems } from '../buttons/SideBarBtnItem';
 import { IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import LabelIcon from '@mui/icons-material/Label';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function SideBar() {
     return (
@@ -27,7 +28,10 @@ function SideBar() {
                     </IconButton>
                 </div>
                 <div className='label-btns'>
-                    <LabelIcon /><p>Notes</p>
+                    <span><LabelIcon /> [GMAIL]/Sent Mail</span>
+                    <span><LabelIcon /> Notes</span>
+                    <span><LabelIcon /> Personal</span>
+                    <span><ExpandMoreIcon /> More</span>
                 </div>
             </div>
         </div>
