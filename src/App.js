@@ -1,12 +1,14 @@
 import './App.css';
-import Header from './components/layout/Header';
-import MainPage from './components/layout/MainPage';
+import HomePage from './pages/HomePage';
+import MailPage from './pages/MailPage';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MainPage />
+      {/* <MailPage /> */}
+      {/* <HomePage /> */}
+      <SignUp />
     </div>
   );
 }
