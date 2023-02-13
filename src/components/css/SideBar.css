@@ -9,17 +9,18 @@
     padding: 10px 10px;
 }
 
-.sidebar-btns {
+.sidebar-btns>div,
+.label-btns>div {
     display: grid;
     grid-template-columns: 14% auto;
     color: gray;
     padding: 6px 25px;
-    border-radius: 0 100px 100px 0;
     cursor: pointer;
     margin-right: 8px;
 }
 
-.sidebar-btns:hover {
+.sidebar-btns>div:hover {
+    border-radius: 0 100px 100px 0;
     background-color: #f5f7f7;
 }
 
@@ -31,11 +32,16 @@
     font-weight: 500;
 }
 
-.label-btns {
+/* .label-btns {
     display: flex;
     flex-direction: column;
     padding-left: 14%;
     color: gray;
     gap: 8px;
     cursor: pointer;
+} */
+
+.label-btns>div:hover {
+    border-radius: 0 100px 100px 0;
+    background-color: #f5f7f7;
 }

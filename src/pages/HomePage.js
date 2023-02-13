@@ -3,8 +3,12 @@ import React from 'react';
 import '../components/css/Pages.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
+
+    const navigate = useNavigate();
+
     return (
         <div className='home-container'>
             <div>
@@ -20,7 +24,7 @@ function HomePage() {
                     <Button variant="contained">Submit</Button>
                 </div>
                 <br /><hr /><br />
-                <Button>Create Account</Button>
+                <Button onClick={() => navigate("/signup")}>Create Account</Button>
                 <br />
             </Card>
         </div>
