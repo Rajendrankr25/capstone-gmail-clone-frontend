@@ -1,9 +1,11 @@
-.header-container {
-    display: grid;
-    grid-template-columns: 250px auto 190px;
-    border-bottom: 1px solid lightgray;
-    height: 70px;
-    align-items: center;
+@media(min-width:700px) {
+    .header-container {
+        display: grid;
+        grid-template-columns: 250px auto 190px;
+        border-bottom: 1px solid lightgray;
+        height: 70px;
+        align-items: center;
+    }
 }
 
 .logo-container {

@@ -1,6 +1,8 @@
-.sidebar-container {
-    border-right: 1px solid lightgray;
-    height: 100vh;
+@media(min-width:700px) {
+    .sidebar-container {
+        border-right: 1px solid lightgray;
+        height: 100vh;
+    }
 }
 
 .compose-container {
@@ -9,14 +11,17 @@
     padding: 10px 10px;
 }
 
-.sidebar-btns>div,
-.label-btns>div {
-    display: grid;
-    grid-template-columns: 14% auto;
-    color: gray;
-    padding: 6px 25px;
-    cursor: pointer;
-    margin-right: 8px;
+@media(min-width:700px) {
+
+    .sidebar-btns>div,
+    .label-btns>div {
+        display: grid;
+        grid-template-columns: 14% auto;
+        color: gray;
+        padding: 6px 25px;
+        cursor: pointer;
+        margin-right: 8px;
+    }
 }
 
 .sidebar-btns>div:hover {

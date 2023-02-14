@@ -2,13 +2,15 @@
     border-radius: 15px;
 }
 
-.topBar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 0px 10px;
-    border-bottom: 1px solid lightgray;
+@media(min-width:700px) {
+    .topBar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0px 10px;
+        border-bottom: 1px solid lightgray;
+    }
 }
 
 .topBar-right>span {
@@ -16,12 +18,14 @@
     color: gray
 }
 
-.mailItem-container {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: min-content min-content 120px auto max-content;
-    align-items: center;
+@media(min-width:700px) {
+    .mailItem-container {
+        padding: 5px 10px;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: min-content min-content 120px auto max-content;
+        align-items: center;
+    }
 }
 
 .sub-msg {
