@@ -17,7 +17,6 @@ function HomePage() {
             username: "",
             password: ""
         }, onSubmit: async (values) => {
-            //console.log(values);
 
             const data = await fetch(`${API}/user/signin`, {
                 method: "POST",
@@ -29,7 +28,6 @@ function HomePage() {
                 alert("Invalid Username or Password");
             } else {
                 const result = await data.json();
-                console.log("success", result);
                 localStorage.setItem('token', result.token);
                 navigate("/inbox");
             }
