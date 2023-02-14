@@ -8,6 +8,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { logOut } from '../../pages/MailPage'
 
 function Header() {
     return (
@@ -31,7 +32,8 @@ function Header() {
                 <IconButton><HelpOutlineIcon /></IconButton>
                 <IconButton><SettingsIcon /></IconButton>
                 <IconButton><AppsIcon /></IconButton>
-                <IconButton><AccountCircleIcon /></IconButton>
+                <IconButton onClick={() => logOut()}
+                ><AccountCircleIcon /></IconButton>
             </div>
         </div>
     )

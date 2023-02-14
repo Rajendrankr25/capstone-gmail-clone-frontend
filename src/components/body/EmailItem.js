@@ -5,9 +5,9 @@ import StarIcon from '@mui/icons-material/Star';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import { Card, IconButton } from '@mui/material';
 
-function EmailItem({ starred, from, subject, message, time, read }) {
+function EmailItem({ emailData }) {
 
-    const [star, setStar] = useState(starred);
+    const [star, setStar] = useState(emailData.starred);
 
     return (
         <Card className='mailItem-container'>
@@ -15,11 +15,11 @@ function EmailItem({ starred, from, subject, message, time, read }) {
             <IconButton onClick={() => star ? setStar(false) : setStar(true)}>
                 {star ? <StarIcon htmlColor='#f7cb69' /> : <StarOutlineIcon />}
             </IconButton>
-            <p className={!read && 'unread'}>{from}</p>
+            <p className={!emailData.read && 'unread'}>{emailData.from}</p>
             <div className='sub-msg'>
-                <p className={!read && 'unread'}>{subject}</p>&nbsp;-&nbsp;<span>{message}</span>
+                <p className={!emailData.read && 'unread'}>{emailData.subject}</p>&nbsp;-&nbsp;<span>{emailData.message}</span>
             </div>
-            <p className={!read && 'unread'}>{time}</p>
+            <p className={!emailData.read && 'unread'}>{emailData.time}</p>
         </Card>
     )
 }

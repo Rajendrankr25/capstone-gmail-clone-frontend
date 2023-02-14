@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import MailPage from './pages/MailPage';
@@ -11,11 +11,20 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/inbox' element={<MailPage />} />
+        <Route path='/inbox' element={
+          <ProtectedRoute>
+            <MailPage />
+          </ProtectedRoute>
+        } />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );
+}
+
+function ProtectedRoute({ children }) {
+  const isAuth = localStorage.getItem("token");
+  return isAuth ? children : <Navigate replace to="/" />
 }
 
 export default App;
