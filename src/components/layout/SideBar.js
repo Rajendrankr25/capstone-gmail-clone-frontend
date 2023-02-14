@@ -1,5 +1,4 @@
 import React from 'react';
-import Compose from '../buttons/Compose';
 import '../css/SideBar.css';
 import { IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
@@ -12,12 +11,13 @@ import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
+import NewMail from '../body/NewMail';
 
 function SideBar() {
     return (
         <div className='sidebar-container'>
             <div className='compose-container'>
-                <Compose />
+                <NewMail />
             </div>
             <div className='sidebar-btns'>
                 <div>
