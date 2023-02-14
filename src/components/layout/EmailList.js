@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import EmailItem from '../body/EmailItem';
 import EmailTopBar from '../body/EmailTopBar';
 import '../css/MailBody.css';
-import { emailData } from '../temp/EmailData';
+import { API } from "../../global";
 
 function EmailList() {
+
+    const [emailData, setEmailData] = useState([]);
+    const mailCount = emailData.length;
+
+    const getEmailData = () => {
+        fetch(`${API}/inbox`, { method: "GET" })
+            .then((data) => data.json())
+            .then((mails) => setEmailData(mails));
+    }
+
+    useEffect(() => getEmailData(), []);
+
     return (
         <div className='body-container'>
-            <EmailTopBar />
+            <EmailTopBar mailCount={mailCount} />
             <div className='emails-container'>
                 {emailData.map(({ starred, from, subject, message, time, read }) => (
                     <EmailItem

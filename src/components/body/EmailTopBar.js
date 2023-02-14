@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-function EmailTopBar() {
+function EmailTopBar({ mailCount }) {
     return (
         <div className='topBar-container'>
             <div className='topBar-left'>
@@ -24,7 +24,7 @@ function EmailTopBar() {
                 </IconButton>
             </div>
             <div className='topBar-right'>
-                <span>1 - 50 of</span>
+                <span>1 - {mailCount} of {mailCount}</span>
                 <IconButton>
                     <ChevronLeftIcon fontSize='small' />
                 </IconButton>
